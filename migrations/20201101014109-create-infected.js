@@ -59,6 +59,9 @@ module.exports = {
       fecha_recuperado: {
         type: Sequelize.STRING
       },
+      fecha_muerte:{
+        type: Sequelize.STRING
+      },
       tipo_recuperacion: {
         type: Sequelize.STRING(10)
       },

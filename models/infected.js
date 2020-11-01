@@ -3,13 +3,9 @@ const { Model } = require('sequelize');
 
 module.exports = (sequelize, DataTypes) => {
   class infected extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+ 
     static associate(models) {
-      // define association here
+     
     }
   };
   infected.init({
@@ -70,7 +66,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     fecha_inicio_sintomas: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING
     },
     fecha_diagnostico: {
@@ -78,11 +74,15 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING
     },
     fecha_recuperado: {
-      allowNull: false,
+      allowNull: true,
+      type: DataTypes.STRING
+    },
+    fecha_muerte: {
+      allowNull: true,
       type: DataTypes.STRING
     },
     tipo_recuperacion: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.STRING(10)
     },
     per_etn_: {

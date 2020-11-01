@@ -1,19 +1,24 @@
 const axios = require('axios');
 const Infected = require('../models').infected;
 const Sequelize = require('sequelize');
+const infected = require('../models/infected');
 
+/**
+ * Create a new infected and add this in the database
+ * @param {*} newInfected 
+ */
 const createInfected = async (newInfected) => {
   try {
     return await Infected.create(newInfected);
   } catch (error) {
-    console.error("Error en el servicio de creacion", error);
+    console.error("Error en el servicio de creacion", error, "idInfectado: ", newInfected.id_de_caso);
     return error;
   }
 }
 
 
 /**
- * This method get all infecteds since the API
+ * This method brings the last id_de_caso entered in the database
  */
 const getLastInfected = async () => {
   try {
@@ -25,9 +30,21 @@ const getLastInfected = async () => {
 }
 
 /**
- * This method get all infecteds since the API
+ * This method get all infecteds register in the Data base
  */
 const getAllInfecteds = async () => {
+  try {
+    return await Infected.findAll({});
+  } catch (error) {
+    console.error("Error en el servicio de buscar todos los infectados", error);
+    return error;
+  }
+}
+
+/**
+ * This method get all infecteds since the external API
+ */
+const getAllNewInfecteds = async () => {
   try {
     return await axios.get('https://www.datos.gov.co/resource/gt2j-8ykr.json');
   } catch (error) {
@@ -40,6 +57,7 @@ const getAllInfecteds = async () => {
 
 module.exports = {
   createInfected,
-  getAllInfecteds,
-  getLastInfected
+  getAllNewInfecteds,
+  getLastInfected,
+  getAllInfecteds
 }
