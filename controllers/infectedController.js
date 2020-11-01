@@ -44,7 +44,7 @@ const getInfectedsWithFilter = async (request, response) => {
         const newDataFilter = {};
         let filter = Object.keys(request.query);
         allInfecteds.forEach(infected => {
-            addInfected(infected, filter, newDataFilter, filter.length)
+            addInfected(infected, filter, newDataFilter)
         });
 
         return response.status(200).send(newDataFilter);

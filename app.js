@@ -2,7 +2,6 @@ const express = require('express');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 
-
 const http = require('http');
 const infectedController = require('./controllers/infectedController');
 

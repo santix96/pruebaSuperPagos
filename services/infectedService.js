@@ -1,7 +1,5 @@
 const axios = require('axios');
 const Infected = require('../models').infected;
-const Sequelize = require('sequelize');
-const infected = require('../models/infected');
 
 /**
  * Create a new infected and add this in the database
