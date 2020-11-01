@@ -1,0 +1,30 @@
+{
+  "name": "pruebasuperpagos",
+  "version": "1.0.0",
+  "description": "prueba express y sequelize",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/santix96/pruebaSuperPagos.git"
+  },
+  "author": "Santiago Granada Aguirre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/santix96/pruebaSuperPagos/issues"
+  },
+  "homepage": "https://github.com/santix96/pruebaSuperPagos#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
