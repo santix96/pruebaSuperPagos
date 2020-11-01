@@ -23,8 +23,8 @@ server.listen(port);
 
 /* function that times the data record in the database with external data from a API */
 const seedDb = () => {
-    var minutes = 15
-    var interval = minutes * 1 * 1000;
+    var minutes = 10
+    var interval = minutes * 60 * 1000;
     infectedController.updateDb();
     setInterval(() => {
         infectedController.updateDb();
