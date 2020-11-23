@@ -1,6 +1,4 @@
-# prueba Super Pagos
-
-Proyecto desarrollado como prueba de ingreso a la empresa Super Pagos en pereira.
+# API infectados covid19
 API para manejo de usuarios infectados.
 
 ## Tecnologias
